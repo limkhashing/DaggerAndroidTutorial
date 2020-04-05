@@ -8,6 +8,7 @@ import dagger.Module
 // this class is responsible for generating dependencies for view model factory
 @Module
 abstract class ViewModelModule {
+    // Binds for interface dependency that don't have method body / implementation
     @Binds
     abstract fun bindViewModelFactory(viewModelProviderFactory: ViewModelProviderFactory)
             : ViewModelProvider.Factory
